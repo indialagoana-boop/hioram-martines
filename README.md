@@ -1,9 +1,11 @@
-# hioram-martines<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Hioram Martines</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -12,9 +14,10 @@
     }
 
     body {
-      background: #0b0b0b;
-      color: #f5f5f5;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      color: #1a1a1a;
+      line-height: 1.8;
     }
 
     header {
@@ -24,6 +27,7 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
+      background: #fdfdfd;
     }
 
     header h1 {
@@ -33,89 +37,104 @@
     }
 
     header p {
-      margin-top: 15px;
-      font-weight: 300;
-      opacity: 0.7;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #666;
     }
 
     section {
       max-width: 900px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     section h2 {
       font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
       font-size: 2rem;
+      margin-bottom: 30px;
     }
 
     section p {
-      opacity: 0.75;
-      line-height: 1.7;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    .impact {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      max-width: 700px;
+      margin: auto;
+      color: #111;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 20px 15px 0;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+    }
+
+    .socials a:hover {
+      border-color: #111;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      opacity: 0.4;
-      font-size: 0.9rem;
+      padding: 40px;
+      font-size: 0.85rem;
+      color: #888;
     }
 
-    /* LOGIN ADMIN */
-    .admin-login {
+    /* ADMIN */
+    .admin-trigger {
       position: fixed;
       bottom: 15px;
       right: 15px;
-      opacity: 0.2;
+      font-size: 0.7rem;
+      opacity: 0.15;
       cursor: pointer;
-      font-size: 0.8rem;
     }
 
-    .login-box {
+    .admin-login {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.95);
+      inset: 0;
+      background: rgba(255,255,255,0.95);
       align-items: center;
       justify-content: center;
     }
 
-    .login-box div {
-      background: #111;
+    .admin-box {
+      background: #fff;
       padding: 40px;
-      border-radius: 8px;
+      border: 1px solid #ddd;
       text-align: center;
       width: 300px;
     }
 
-    .login-box input {
+    .admin-box input {
       width: 100%;
       padding: 10px;
-      margin-top: 15px;
-      background: #000;
-      border: 1px solid #333;
-      color: white;
+      margin-top: 20px;
+      border: 1px solid #ccc;
     }
 
-    .login-box button {
-      margin-top: 15px;
+    .admin-box button {
+      margin-top: 20px;
       padding: 10px;
       width: 100%;
-      background: white;
-      color: black;
+      background: #111;
+      color: white;
       border: none;
       cursor: pointer;
-      font-weight: bold;
     }
 
     .admin-panel {
       display: none;
-      padding: 80px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
   </style>
@@ -125,27 +144,44 @@
 <header>
   <div>
     <h1>HIORAM MARTINES</h1>
-    <p>Identidade. Estilo. Presença.</p>
+    <p>Marca pessoal • Estética • Presença</p>
   </div>
 </header>
 
 <section>
   <h2>Sobre</h2>
   <p>
-    Uma marca pessoal construída com autenticidade, estética e propósito.
-    Menos excesso, mais essência.
+    Hioram Martines é uma marca pessoal construída a partir da simplicidade,
+    da intenção e do olhar atento aos detalhes.  
+    Cada escolha comunica identidade, cada elemento carrega propósito.
   </p>
+</section>
+
+<section>
+  <p class="impact">
+    “Menos ruído. Mais essência.  
+    Presença que não precisa ser explicada.”
+  </p>
+</section>
+
+<section>
+  <h2>Conexões</h2>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">WhatsApp</a>
+    <a href="#">Contato</a>
+  </div>
 </section>
 
 <footer>
   © 2026 • Hioram Martines
 </footer>
 
-<div class="admin-login" onclick="abrirLogin()">admin</div>
+<div class="admin-trigger" onclick="abrirAdmin()">admin</div>
 
-<div class="login-box" id="loginBox">
-  <div>
-    <h2>Admin</h2>
+<div class="admin-login" id="adminLogin">
+  <div class="admin-box">
+    <h3>Administrador</h3>
     <input type="password" id="senha" placeholder="Senha">
     <button onclick="login()">Entrar</button>
   </div>
@@ -153,14 +189,14 @@
 
 <div class="admin-panel" id="adminPanel">
   <h2>Painel Administrativo</h2>
-  <p>Aqui você pode planejar conteúdos, ideias e estrutura da marca.</p>
+  <p>Área reservada para gestão e planejamento da marca.</p>
 </div>
 
 <script>
   const senhaCorreta = "guerra99";
 
-  function abrirLogin() {
-    document.getElementById("loginBox").style.display = "flex";
+  function abrirAdmin() {
+    document.getElementById("adminLogin").style.display = "flex";
   }
 
   function login() {
