@@ -184,7 +184,11 @@
     <h3>Administrador</h3>
     <input type="password" id="senha" placeholder="Senha">
     <button onclick="login()">Entrar</button>
-  </div>
+  </div><div class="socials">
+  <a href="LINK_DO_INSTAGRAM" target="_blank">Instagram</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">Contato</a>
+</div>
 </div>
 
 <div class="admin-panel" id="adminPanel">
