@@ -17,10 +17,20 @@
       color: #222;
     }
 
-    header {
-      background: #ffffff;
-      padding: 120px 20px;
-      text-align: center;
+    header {header {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url("<img width="1080" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d0199e4-3c7e-42f5-aefb-f4fbc7183a4a" />
+fundo.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
     }
 
     header img {header {
