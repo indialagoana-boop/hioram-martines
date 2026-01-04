@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Hioram Martines</title>
-html {
-  scroll-behavior: smooth;
-}
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -15,6 +13,10 @@ html {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f5f5f3;
@@ -22,21 +24,19 @@ html {
     }
 
     header {
-      background: #ffffff;
-      padding: 120px 20px;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url("fundo.jpg") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 40px 20px;
     }
 
-    header img {header {header {
-  background: 
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url("fundo.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 140px 20px;
-  text-align: center;
-}
-}
+    header img {
       width: 130px;
       margin-bottom: 30px;
     }
@@ -102,16 +102,7 @@ html {
       font-size: 0.8rem;
       color: #999;
     }
-  </style> 
-  <section>
-  <h2>Experiência</h2>
-
-  <p class="about">
-    Atendimento focado em estética, presença e identidade.
-    Cada detalhe pensado para transmitir sofisticação,
-    cuidado e exclusividade.
-  </p>
-</section>
+  </style>
 </head>
 
 <body>
@@ -138,6 +129,15 @@ html {
       <a href="https://www.instagram.com/bruno_eu_hioram" target="_blank">Instagram</a>
       <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
     </div>
+  </section>
+
+  <section>
+    <h2>Experiência</h2>
+    <p class="about">
+      Atendimento focado em estética, presença e identidade.
+      Cada detalhe pensado para transmitir sofisticação,
+      cuidado e exclusividade.
+    </p>
   </section>
 
   <footer>
