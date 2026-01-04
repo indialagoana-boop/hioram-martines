@@ -113,7 +113,9 @@
     <p class="about">
       Hioram Martines é uma marca pessoal construída a partir da estética,
       da clareza e do olhar atento aos detalhes.  
-      Cada escolha comunica identidade. Cada presença deixa marca.
+      Cada escolha comunica identidade.
+      Nao sao apenas unhas!
+      São sua identidade.
     </p>
 
     <div class="socials">
