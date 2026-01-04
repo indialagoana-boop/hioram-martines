@@ -1,188 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Hioram Martines</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Montserrat', sans-serif; background-color: #f5f5f3; color:#222; }
-    html { scroll-behavior:smooth; }
+<meta charset="UTF-8">
+<title>Hioram Martines</title>
+<style>
+  body, html {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f3;
+  }
+  /* Tela de login */
+  #loginScreen {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+  }
+  #loginBox {
+    background:#fff;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+  }
+  #loginBox input {
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+  }
+  #loginBox button {
+    width:100%;
+    padding:10px;
+    background:#222;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+  }
+  #loginBox h2 { margin-bottom:20px; }
 
-    /* Tela de login */
-    #loginScreen {
-      position: fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      background: rgba(0,0,0,0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    #loginBox {
-      background: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-      width: 300px;
-    }
-    #loginBox input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    #loginBox button {
-      padding: 10px 20px;
-      margin-top: 10px;
-      border: none;
-      background: #222;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 5px;
-      width: 100%;
-    }
-    #loginBox h2 { margin-bottom:20px; font-family: 'Playfair Display', serif; }
+  /* Site */
+  #siteContent { display:none; }
+  header {
+    min-height:100vh;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+                url("fundo.jpg") center/cover no-repeat;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center;
+    padding:40px 20px;
+  }
+  header img { width:130px; margin-bottom:30px; }
+  header h1 { font-size:3rem; margin-bottom:15px; }
+  header p { font-size:1rem; color:#777; text-transform:uppercase; letter-spacing:2px; }
 
-    /* Header */
-    header {
-      min-height: 100vh;
-      background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-        url("fundo.jpg") center/cover no-repeat;
-      display:flex; flex-direction:column;
-      justify-content:center; align-items:center;
-      text-align:center;
-      padding:40px 20px;
-    }
-    header img { width:130px; margin-bottom:30px; }
-    header h1 { font-family:'Playfair Display', serif; font-size:3rem; letter-spacing:2px; margin-bottom:15px; }
-    header p { font-size:1rem; letter-spacing:4px; text-transform:uppercase; color:#777; }
+  section { max-width:900px; margin:auto; padding:50px 20px; text-align:center; }
+  .impact { font-size:2rem; margin-bottom:40px; cursor:pointer; font-weight:bold; }
+  .about { font-size:1.05rem; color:#555; margin-bottom:40px; line-height:1.6; }
+  .buttons a { display:inline-block; margin:10px; padding:10px 30px; border:1px solid #222; text-decoration:none; color:#222; text-transform:uppercase; }
+  .buttons a:hover { background:#222; color:#fff; }
+  footer { background:#fff; padding:20px; text-align:center; font-size:0.8rem; color:#999; }
 
-    /* Seções */
-    section { max-width:900px; margin:auto; padding:100px 20px; text-align:center; }
-    .impact { font-family: 'Playfair Display', serif; font-size:2rem; margin-bottom:60px; cursor:pointer; }
-    .about { font-size:1.05rem; color:#555; max-width:700px; margin:auto; margin-bottom:60px; line-height:1.8; transition:background 0.5s; padding:20px; border-radius:10px; }
-    .buttons a {
-      display:inline-block;
-      margin:12px;
-      padding:14px 36px;
-      border:1px solid #222;
-      text-decoration:none;
-      color:#222;
-      font-size:0.9rem;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      transition:0.3s;
-    }
-    .buttons a:hover { background:#222; color:#fff; }
-    footer { background:#fff; padding:40px; text-align:center; font-size:0.8rem; color:#999; }
-
-  </style>
+</style>
 </head>
 <body>
 
-  <!-- Tela de login -->
-  <div id="loginScreen">
-    <div id="loginBox">
-      <h2>Login</h2>
-      <input type="text" id="usuario" placeholder="Usuário">
-      <input type="password" id="senha" placeholder="Senha">
-      <button onclick="fazerLogin()">Entrar</button>
+<!-- Tela de login -->
+<div id="loginScreen">
+  <div id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="fazerLogin()">Entrar</button>
+  </div>
+</div>
+
+<!-- Conteúdo do site -->
+<div id="siteContent">
+  <header>
+    <img src="logo.png" alt="Hioram Martines">
+    <h1>HIORAM MARTINES</h1>
+    <p>Marca pessoal • Estética • Presença</p>
+  </header>
+
+  <section>
+    <div class="impact" onclick="mudarFrase()">Elegância é quando a presença fala antes das palavras.</div>
+    <div class="about" id="sobre">
+      Hioram Martines é uma marca pessoal guiada pela estética, cuidado com os detalhes e construção de uma identidade sofisticada e autêntica. Cada escolha comunica.
     </div>
-  </div>
+    <div class="buttons">
+      <a href="https://www.instagram.com/bruno_eu_hioram" target="_blank">Instagram</a>
+      <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
+    </div>
+  </section>
 
-  <!-- Conteúdo do site -->
-  <div id="siteConteudo" style="display:none;">
-    <header>
-      <img src="logo.png" alt="Hioram Martines">
-      <h1>HIORAM MARTINES</h1>
-      <p>Marca pessoal • Estética • Presença</p>
-    </header>
+  <section>
+    <h2>Experiência</h2>
+    <p class="about">
+      Atendimento focado em estética, presença e identidade. Cada detalhe pensado para transmitir sofisticação e exclusividade.
+    </p>
+  </section>
 
-    <section>
-      <div class="impact" onclick="mudarImpacto()">
-        Elegância é quando a presença fala antes das palavras.
-      </div>
+  <footer>© 2026 · Hioram Martines</footer>
+</div>
 
-      <div class="about" id="sobre">
-        Hioram Martines é uma marca pessoal guiada pela estética,
-        pelo cuidado com os detalhes e pela construção de uma identidade
-        sofisticada, limpa e autêntica.  
-        Cada escolha comunica. Cada presença permanece.
-      </div>
+<script>
+  // Usuário e senha
+  const usuarioCorreto = "Hioram";
+  const senhaCorreta = "Guerra99";
 
-      <div class="buttons">
-        <a href="#" onclick="abrirInstagram()">Instagram</a>
-        <a href="#" onclick="abrirWhatsApp()">WhatsApp</a>
-        <a href="#" onclick="mudarCorSobre()">Mudar Fundo</a>
-      </div>
-    </section>
+  function fazerLogin(){
+    const usuario = document.getElementById("usuario").value;
+    const senha = document.getElementById("senha").value;
 
-    <section>
-      <h2>Experiência</h2>
-      <p class="about">
-        Atendimento focado em estética, presença e identidade.
-        Cada detalhe pensado para transmitir sofisticação,
-        cuidado e exclusividade.
-      </p>
-    </section>
-
-    <footer>
-      © 2026 · Hioram Martines
-    </footer>
-  </div>
-
-  <script>
-    // Login
-    const usuarioCorreto = "Hioram";
-    const senhaCorreta = "Guerra99";
-
-    function fazerLogin() {
-      const usuario = document.getElementById("usuario").value;
-      const senha = document.getElementById("senha").value;
-
-      if(usuario === usuarioCorreto && senha === senhaCorreta) {
-        document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("siteConteudo").style.display = "block";
-      } else {
-        alert("Usuário ou senha incorretos");
-        document.getElementById("senha").value = "";
-      }
+    if(usuario === usuarioCorreto && senha === senhaCorreta){
+      document.getElementById("loginScreen").style.display = "none";
+      document.getElementById("siteContent").style.display = "block";
+    } else {
+      alert("Usuário ou senha incorretos!");
+      document.getElementById("senha").value = "";
     }
+  }
 
-    // Funções do site
-    function abrirInstagram() {
-      window.open("https://www.instagram.com/bruno_eu_hioram", "_blank");
+  // Mudar frase de impacto
+  function mudarFrase(){
+    const frases = [
+      "Elegância é quando a presença fala antes das palavras.",
+      "Detalhes fazem toda a diferença.",
+      "Sofisticação está na autenticidade.",
+      "Cada presença comunica mais que palavras."
+    ];
+    const el = document.querySelector(".impact");
+    let nova = frases[Math.floor(Math.random() * frases.length)];
+    while(nova === el.textContent){
+      nova = frases[Math.floor(Math.random() * frases.length)];
     }
-    function abrirWhatsApp() {
-      window.open("https://wa.me/message/PIVHCRXKTGIJL1", "_blank");
-    }
-    function mudarImpacto() {
-      const frases = [
-        "Elegância é quando a presença fala antes das palavras.",
-        "Detalhes fazem toda a diferença.",
-        "A sofisticação está na autenticidade.",
-        "Cada escolha comunica, cada presença permanece."
-      ];
-      const impact = document.querySelector(".impact");
-      let novaFrase = frases[Math.floor(Math.random() * frases.length)];
-      while(novaFrase === impact.textContent) {
-        novaFrase = frases[Math.floor(Math.random() * frases.length)];
-      }
-      impact.textContent = novaFrase;
-    }
-    function mudarCorSobre() {
-      const cores = ["#f5f5f3","#ffe4e1","#d1ffd6","#cce7ff","#fff4b2"];
-      const sobre = document.getElementById("sobre");
-      let novaCor = cores[Math.floor(Math.random() * cores.length)];
-      while(novaCor === sobre.style.backgroundColor) {
-        novaCor = cores[Math.floor(Math.random() * cores.length)];
-      }
-      sobre.style.backgroundColor = novaCor;
-    }
-  </script>
+    el.textContent = nova;
+  }
+</script>
 
 </body>
 </html>
