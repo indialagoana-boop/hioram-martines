@@ -10,13 +10,14 @@
     font-family: Arial, sans-serif;
     background:#f5f5f3;
   }
+
   /* Tela de login */
   #loginScreen {
     position: fixed;
     top:0; left:0;
     width:100%; height:100%;
     background: rgba(0,0,0,0.8);
-    display:flex;
+    display:none; /* Começa escondido */
     justify-content:center;
     align-items:center;
     z-index:1000;
@@ -47,7 +48,7 @@
   #loginBox h2 { margin-bottom:20px; }
 
   /* Site */
-  #siteContent { display:none; }
+  #siteContent { display:block; }
   header {
     min-height:100vh;
     background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
@@ -67,9 +68,26 @@
   .buttons a:hover { background:#222; color:#fff; }
   footer { background:#fff; padding:20px; text-align:center; font-size:0.8rem; color:#999; }
 
+  /* Botão de login específico */
+  #botaoLogin {
+    padding:15px 30px;
+    font-size:1rem;
+    background:#222;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+    margin:30px auto;
+    display:block;
+  }
+  #botaoLogin:hover { background:#555; }
 </style>
 </head>
 <body>
+
+<!-- Botão específico de login -->
+<button id="botaoLogin" onclick="abrirLogin()">Login</button>
 
 <!-- Tela de login -->
 <div id="loginScreen">
@@ -114,6 +132,11 @@
   // Usuário e senha
   const usuarioCorreto = "Hioram";
   const senhaCorreta = "Guerra99";
+
+  function abrirLogin() {
+    document.getElementById("loginScreen").style.display = "flex";
+    document.getElementById("siteContent").style.display = "none";
+  }
 
   function fazerLogin(){
     const usuario = document.getElementById("usuario").value;
