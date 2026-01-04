@@ -1,3 +1,8 @@
+<div>
+  <img src="logo.png" alt="Bruno Guerra" class="logo">
+  <h1>HIORAM MARTINES</h1>
+  <p>Marca pessoal • Estética • Presença</p>
+</div>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
