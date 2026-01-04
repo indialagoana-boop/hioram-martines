@@ -17,7 +17,7 @@
     top:0; left:0;
     width:100%; height:100%;
     background: rgba(0,0,0,0.8);
-    display:none; /* começa escondido */
+    display:none;
     justify-content:center;
     align-items:center;
     z-index:1000;
@@ -130,30 +130,26 @@
 </div>
 
 <script>
-  // Usuário e senha
   const usuarioCorreto = "Hioram";
   const senhaCorreta = "Guerra99";
 
-  // Abre a tela de login
   function abrirLogin() {
     document.getElementById("loginScreen").style.display = "flex";
   }
 
-  // Função do login
   function fazerLogin(){
     const usuario = document.getElementById("usuario").value;
     const senha = document.getElementById("senha").value;
 
     if(usuario === usuarioCorreto && senha === senhaCorreta){
       document.getElementById("loginScreen").style.display = "none";
-      alert("Bem-vindo, Hioram!"); // opcional
+      alert("Bem-vindo, Hioram!");
     } else {
       alert("Usuário ou senha incorretos!");
       document.getElementById("senha").value = "";
     }
   }
 
-  // Frase de impacto aleatória
   function mudarFrase(){
     const frases = [
       "Elegância é quando a presença fala antes das palavras.",
