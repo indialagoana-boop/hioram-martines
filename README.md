@@ -1,5 +1,6 @@
 <div>
-  <img src="logo.png" alt="Bruno Guerra" class="logo">
+  <img src="logo.png<img width="1080" height="1080" alt="Logotipo%20Monograma%20Elegante%20Preto%20-%201" src="https://github.com/user-attachments/assets/4caa3f2d-5d0d-4f5d-aa54-17c44764f2c4" />
+" alt="Bruno Guerra" class="logo">
   <h1>HIORAM MARTINES</h1>
   <p>Marca pessoal • Estética • Presença</p>
 </div>
@@ -187,10 +188,11 @@
 
 <section>
   <h2>Conexões</h2>
-  <div class="socials">
-    <a href="#">Instagram</a>
-    <a href="#">WhatsApp</a>
-    <a href="#">Contato</a>
+  <div <div class="socials">
+  <a href="https://www.instagram.com/bruno_eu_hioram?igsh=dThsMDFtY2R4Ynp3&utm_source=qr" target="_blank">Instagram</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">Contato</a>
+</div>
   </div>
 </section>
 
