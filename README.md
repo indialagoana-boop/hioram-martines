@@ -102,7 +102,16 @@ html {
       font-size: 0.8rem;
       color: #999;
     }
-  </style>
+  </style> 
+  <section>
+  <h2>Experiência</h2>
+
+  <p class="about">
+    Atendimento focado em estética, presença e identidade.
+    Cada detalhe pensado para transmitir sofisticação,
+    cuidado e exclusividade.
+  </p>
+</section>
 </head>
 
 <body>
