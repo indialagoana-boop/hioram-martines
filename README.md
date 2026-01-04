@@ -25,14 +25,15 @@
       text-align: center;
     }
 
-    header img {header {
-  background:
-    linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+    header img {header {header {
+  background: 
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
     url("fundo.jpg");
   background-size: cover;
   background-position: center;
   padding: 140px 20px;
   text-align: center;
+}
 }
       width: 130px;
       margin-bottom: 30px;
