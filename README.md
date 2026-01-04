@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <title>Hioram Martines</title>
 
-  <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,79 +14,80 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f8f8f8;
-      color: #111;
-      line-height: 1.6;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f3;
+      color: #222;
     }
 
     header {
-      padding: 100px 20px 80px;
+      background: #ffffff;
+      padding: 120px 20px;
       text-align: center;
     }
 
-    .logo {
-      width: 140px;
+    header img {
+      width: 130px;
       margin-bottom: 30px;
     }
 
-    h1 {
+    header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
+      font-size: 3rem;
       letter-spacing: 2px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     header p {
-      font-size: 0.95rem;
-      letter-spacing: 3px;
-      color: #666;
+      font-size: 1rem;
+      letter-spacing: 4px;
       text-transform: uppercase;
+      color: #777;
     }
 
     section {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 20px;
       text-align: center;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
     }
 
     .impact {
       font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: #111;
+      font-size: 2rem;
       margin-bottom: 60px;
     }
 
     .about {
-      font-size: 1rem;
-      color: #444;
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 700px;
+      margin: auto;
       margin-bottom: 60px;
+      line-height: 1.8;
     }
 
-    .socials a {
+    .buttons a {
       display: inline-block;
-      margin: 0 18px;
+      margin: 12px;
+      padding: 14px 36px;
+      border: 1px solid #222;
       text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 4px;
+      color: #222;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.3s;
     }
 
-    .socials a:hover {
-      border-color: #111;
+    .buttons a:hover {
+      background: #222;
+      color: #fff;
     }
 
     footer {
+      background: #ffffff;
+      padding: 40px;
       text-align: center;
-      padding: 50px 20px;
       font-size: 0.8rem;
       color: #999;
     }
@@ -97,31 +97,26 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Bruno Guerra" class="logo">
+    <img src="logo.png" alt="Hioram Martines">
     <h1>HIORAM MARTINES</h1>
     <p>Marca pessoal • Estética • Presença</p>
   </header>
 
   <section>
-    <p class="impact">
-      A sofisticação está na simplicidade.<br>
-      O impacto está na intenção.
-    </p>
+    <div class="impact">
+      Elegância é quando a presença fala antes das palavras.
+    </div>
 
-    <h2>Sobre</h2>
+    <div class="about">
+      Hioram Martines é uma marca pessoal guiada pela estética,
+      pelo cuidado com os detalhes e pela construção de uma identidade
+      sofisticada, limpa e autêntica.  
+      Cada escolha comunica. Cada presença permanece.
+    </div>
 
-    <p class="about">
-      Hioram Martines é uma marca pessoal construída a partir da estética,
-      da clareza e do olhar atento aos detalhes.  
-      Cada escolha comunica identidade.
-      Nao sao apenas unhas!
-      São sua identidade.
-    </p>
-
-    <div class="socials">
+    <div class="buttons">
       <a href="https://www.instagram.com/bruno_eu_hioram" target="_blank">Instagram</a>
       <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
-      <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">Contato</a>
     </div>
   </section>
 
