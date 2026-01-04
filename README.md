@@ -7,8 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {url("
-  backgro<img width="1080" height="1080" alt="fundo jpg" src="https://github.com/user-attachments/assets/bf14c09e-823b-4459-ab40-02568d06aea8 ") />
+    * {url
     }
 
     body {
