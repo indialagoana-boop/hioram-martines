@@ -20,7 +20,19 @@
       line-height: 1.8;
     }
 
-    header {
+    header {<header>
+  <div>
+    <img src="logo.png" alt="Bruno Guerra" class="logo">.logo {
+  width: 140px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    <h1>HIORAM MARTINES</h1>
+    <p>Marca pessoal • Estética • Presença</p>
+  </div>
+</header>
       height: 100vh;
       display: flex;
       align-items: center;
@@ -139,7 +151,11 @@
     }
   </style>
 </head>
-<body>
+<body><div class="socials">
+  <a href="https://www.instagram.com/bruno_eu_hioram?igsh=dThsMDFtY2R4Ynp3&utm_source=qr" target="_blank">Instagram</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
+  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">Contato</a>
+</div>
 
 <header>
   <div>
@@ -184,10 +200,7 @@
     <h3>Administrador</h3>
     <input type="password" id="senha" placeholder="Senha">
     <button onclick="login()">Entrar</button>
-  </div><div class="socials">
-  <a href="LINK_DO_INSTAGRAM" target="_blank">Instagram</a>
-  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">WhatsApp</a>
-  <a href="https://wa.me/message/PIVHCRXKTGIJL1" target="_blank">Contato</a>
+  </div><div
 </div>
 </div>
 
