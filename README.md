@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Hioram Martines</title>
-
+html {
+  scroll-behavior: smooth;
+}
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
