@@ -32,7 +32,8 @@
   background-size: cover;
   background-position: center;
   padding: 140px 20px;
-  text-align: center;
+  text-align: center;<img width="1080" height="1080" alt="IMG_5021" src="https://github.com/user-attachments/assets/89cc8981-6475-4768-97ed-6a1175cf2a87" />
+
 }
       width: 130px;
       margin-bottom: 30px;
