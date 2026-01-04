@@ -17,7 +17,7 @@
     top:0; left:0;
     width:100%; height:100%;
     background: rgba(0,0,0,0.8);
-    display:none; /* Começa escondido */
+    display:none;
     justify-content:center;
     align-items:center;
     z-index:1000;
@@ -48,7 +48,6 @@
   #loginBox h2 { margin-bottom:20px; }
 
   /* Site */
-  #siteContent { display:block; }
   header {
     min-height:100vh;
     background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
@@ -66,9 +65,9 @@
   .about { font-size:1.05rem; color:#555; margin-bottom:40px; line-height:1.6; }
   .buttons a { display:inline-block; margin:10px; padding:10px 30px; border:1px solid #222; text-decoration:none; color:#222; text-transform:uppercase; }
   .buttons a:hover { background:#222; color:#fff; }
-  footer { background:#fff; padding:20px; text-align:center; font-size:0.8rem; color:#999; }
+  footer { background:#fff; padding:20px; text-align:center; font-size:0.8rem; color:#999; position:relative; }
 
-  /* Botão de login específico */
+  /* Botão de login evidente no rodapé */
   #botaoLogin {
     padding:15px 30px;
     font-size:1rem;
@@ -78,16 +77,13 @@
     border-radius:5px;
     cursor:pointer;
     transition:0.3s;
-    margin:30px auto;
-    display:block;
+    margin-top:20px;
   }
   #botaoLogin:hover { background:#555; }
+
 </style>
 </head>
 <body>
-
-<!-- Botão específico de login -->
-<button id="botaoLogin" onclick="abrirLogin()">Login</button>
 
 <!-- Tela de login -->
 <div id="loginScreen">
@@ -125,17 +121,20 @@
     </p>
   </section>
 
-  <footer>© 2026 · Hioram Martines</footer>
+  <footer>
+    © 2026 · Hioram Martines
+    <br>
+    <!-- Botão de login sempre visível -->
+    <button id="botaoLogin" onclick="abrirLogin()">Login</button>
+  </footer>
 </div>
 
 <script>
-  // Usuário e senha
   const usuarioCorreto = "Hioram";
   const senhaCorreta = "Guerra99";
 
   function abrirLogin() {
     document.getElementById("loginScreen").style.display = "flex";
-    document.getElementById("siteContent").style.display = "none";
   }
 
   function fazerLogin(){
@@ -144,14 +143,13 @@
 
     if(usuario === usuarioCorreto && senha === senhaCorreta){
       document.getElementById("loginScreen").style.display = "none";
-      document.getElementById("siteContent").style.display = "block";
+      alert("Bem-vindo, Hioram!");
     } else {
       alert("Usuário ou senha incorretos!");
       document.getElementById("senha").value = "";
     }
   }
 
-  // Mudar frase de impacto
   function mudarFrase(){
     const frases = [
       "Elegância é quando a presença fala antes das palavras.",
